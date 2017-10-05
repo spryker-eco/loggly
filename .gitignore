@@ -12,5 +12,5 @@
 # OS
 .DS_Store
 
-/tests/_output/*
-!/tests/_output/.gitkeep
+vendor/
+composer.phar

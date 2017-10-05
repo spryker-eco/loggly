@@ -7,8 +7,8 @@
 
 namespace SprykerEco\Zed\Loggly;
 
-use Spryker\Shared\Loggly\LogglyConstants;
 use Spryker\Zed\Kernel\AbstractBundleConfig;
+use SprykerEco\Shared\Loggly\LogglyConstants;
 
 class LogglyConfig extends AbstractBundleConfig
 {
