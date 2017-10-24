@@ -28,6 +28,14 @@ interface LogglyConstants
 
     /**
      * Specification:
+     * - Name of your Loggly log error queue (default: loggly-log-queue-error).
+     *
+     * @api
+     */
+    const ERROR_QUEUE_NAME = 'LOGGLY:ERROR_QUEUE_NAME';
+
+    /**
+     * Specification:
      * - Chunk size for messages to be processed from queue (default: 50).
      *
      * @api

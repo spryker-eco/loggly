@@ -13,7 +13,8 @@ use SprykerEco\Shared\Loggly\LogglyConstants;
 class LogglyConfig extends AbstractBundleConfig
 {
 
-    const QUEUE_NAME_DEFAULT = 'loggly-log-queue';
+    const DEFAULT_QUEUE_NAME = 'loggly-log-queue';
+    const DEFAULT_ERROR_QUEUE_NAME = 'loggly-log-queue.error';
 
     const HOST = 'logs-01.loggly.com';
     const ENDPOINT_BULK = 'bulk';
@@ -39,7 +40,7 @@ class LogglyConfig extends AbstractBundleConfig
      */
     public function getQueueName()
     {
-        return $this->get(LogglyConstants::QUEUE_NAME, static::QUEUE_NAME_DEFAULT);
+        return $this->get(LogglyConstants::QUEUE_NAME, static::DEFAULT_QUEUE_NAME);
     }
 
     /**
