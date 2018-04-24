@@ -17,7 +17,6 @@ use Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface;
  */
 class LogglyLoggerQueueMessageProcessorPlugin extends AbstractPlugin implements QueueMessageProcessorPluginInterface
 {
-
     /**
      * @param \Generated\Shared\Transfer\QueueReceiveMessageTransfer[] $queueMessageTransfers
      *
@@ -63,5 +62,4 @@ class LogglyLoggerQueueMessageProcessorPlugin extends AbstractPlugin implements 
     {
         return $this->getConfig()->getQueueChunkSize();
     }
-
 }

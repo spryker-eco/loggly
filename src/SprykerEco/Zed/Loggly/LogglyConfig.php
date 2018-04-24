@@ -12,7 +12,6 @@ use SprykerEco\Shared\Loggly\LogglyConstants;
 
 class LogglyConfig extends AbstractBundleConfig
 {
-
     const DEFAULT_QUEUE_NAME = 'loggly-log-queue';
     const DEFAULT_ERROR_QUEUE_NAME = 'loggly-log-queue.error';
 
@@ -50,5 +49,4 @@ class LogglyConfig extends AbstractBundleConfig
     {
         return $this->get(LogglyConstants::QUEUE_CHUNK_SIZE, 50);
     }
-
 }

@@ -9,7 +9,6 @@ namespace SprykerEco\Shared\Loggly;
 
 interface LogglyConstants
 {
-
     /**
      * Specification:
      * - Token for your loggly account.
@@ -41,5 +40,4 @@ interface LogglyConstants
      * @api
      */
     const QUEUE_CHUNK_SIZE = 'LOGGLY:QUEUE_CHUNK_SIZE';
-
 }
