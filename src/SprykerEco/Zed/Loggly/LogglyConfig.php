@@ -43,7 +43,7 @@ class LogglyConfig extends AbstractBundleConfig
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getQueueChunkSize()
     {
