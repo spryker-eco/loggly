@@ -1,8 +1,10 @@
 {
   "name": "spryker-eco/loggly",
+  "type": "library",
   "description": "Loggly module",
   "license": "proprietary",
   "require": {
+    "php": ">=7.1",
     "spryker/kernel": "^3.0.0"
   },
   "require-dev": {
@@ -14,13 +16,14 @@
     "spryker/monolog": "Needed to send messages to loggly via Curl helper",
     "spryker/queue": "Needed to process messages from the queue"
   },
-  "autoload": {
-    "psr-4": {
-      "SprykerEco\\": "src/SprykerEco/"
-    }
-  },
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://code.spryker.com/repo/private"
+    }
+  ],
   "extra": {
     "branch-alias": {
       "dev-master": "1.0.x-dev"
@@ -28,11 +31,5 @@
   },
   "config": {
     "sort-packages": true
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://code.spryker.com/repo/private"
-    }
-  ]
+  }
 }
