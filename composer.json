@@ -16,6 +16,11 @@
     "spryker/monolog": "Needed to send messages to loggly via Curl helper",
     "spryker/queue": "Needed to process messages from the queue"
   },
+  "autoload": {
+    "psr-4": {
+      "SprykerEco\\": "src/SprykerEco/"
+    }
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "repositories": [
