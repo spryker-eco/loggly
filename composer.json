@@ -1,8 +1,10 @@
 {
   "name": "spryker-eco/loggly",
+  "type": "library",
   "description": "Loggly module",
   "license": "proprietary",
   "require": {
+    "php": ">=7.1",
     "spryker/kernel": "^3.0.0"
   },
   "require-dev": {
@@ -28,11 +30,5 @@
   },
   "config": {
     "sort-packages": true
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://code.spryker.com/repo/private"
-    }
-  ]
+  }
 }
