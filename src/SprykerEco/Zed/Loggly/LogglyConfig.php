@@ -12,11 +12,11 @@ use SprykerEco\Shared\Loggly\LogglyConstants;
 
 class LogglyConfig extends AbstractBundleConfig
 {
-    protected const DEFAULT_QUEUE_NAME = 'loggly-log-queue';
-    protected const DEFAULT_ERROR_QUEUE_NAME = 'loggly-log-queue.error';
+    public const DEFAULT_QUEUE_NAME = 'loggly-log-queue';
+    public const DEFAULT_ERROR_QUEUE_NAME = 'loggly-log-queue.error';
 
-    protected const HOST = 'logs-01.loggly.com';
-    protected const ENDPOINT_BULK = 'bulk';
+    public const HOST = 'logs-01.loggly.com';
+    public const ENDPOINT_BULK = 'bulk';
 
     /**
      * @return \Spryker\Shared\Config\Config
