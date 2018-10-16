@@ -2,11 +2,7 @@ language: php
 
 php:
   - 7.1
-
-cache:
-  directories:
-    - vendor
-    - $HOME/.composer/cache
+  - 7.2
 
 env:
   global:
@@ -14,11 +10,10 @@ env:
     - APPLICATION_STORE=DE
 
 install:
-  - composer self-update && composer --version
   - composer install --no-interaction --prefer-dist
 
 script:
-  - vendor/bin/phpcs src --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml
+  - vendor/bin/phpcs --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/
 
 after_success:
   - vendor/bin/coveralls -vvv

@@ -12,11 +12,11 @@ use SprykerEco\Shared\Loggly\LogglyConstants;
 
 class LogglyConfig extends AbstractBundleConfig
 {
-    const DEFAULT_QUEUE_NAME = 'loggly-log-queue';
-    const DEFAULT_ERROR_QUEUE_NAME = 'loggly-log-queue.error';
+    protected const DEFAULT_QUEUE_NAME = 'loggly-log-queue';
+    protected const DEFAULT_ERROR_QUEUE_NAME = 'loggly-log-queue.error';
 
-    const HOST = 'logs-01.loggly.com';
-    const ENDPOINT_BULK = 'bulk';
+    protected const HOST = 'logs-01.loggly.com';
+    protected const ENDPOINT_BULK = 'bulk';
 
     /**
      * @return \Spryker\Shared\Config\Config
@@ -43,7 +43,7 @@ class LogglyConfig extends AbstractBundleConfig
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getQueueChunkSize()
     {

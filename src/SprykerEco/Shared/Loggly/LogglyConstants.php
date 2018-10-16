@@ -18,7 +18,7 @@ interface LogglyConstants
      *
      * @api
      */
-    const TOKEN = 'LOGGLY:TOKEN';
+    public const TOKEN = 'LOGGLY:TOKEN';
 
     /**
      * Specification:
@@ -26,7 +26,7 @@ interface LogglyConstants
      *
      * @api
      */
-    const QUEUE_NAME = 'LOGGLY:QUEUE_NAME';
+    public const QUEUE_NAME = 'LOGGLY:QUEUE_NAME';
 
     /**
      * Specification:
@@ -34,7 +34,7 @@ interface LogglyConstants
      *
      * @api
      */
-    const ERROR_QUEUE_NAME = 'LOGGLY:ERROR_QUEUE_NAME';
+    public const ERROR_QUEUE_NAME = 'LOGGLY:ERROR_QUEUE_NAME';
 
     /**
      * Specification:
@@ -42,5 +42,5 @@ interface LogglyConstants
      *
      * @api
      */
-    const QUEUE_CHUNK_SIZE = 'LOGGLY:QUEUE_CHUNK_SIZE';
+    public const QUEUE_CHUNK_SIZE = 'LOGGLY:QUEUE_CHUNK_SIZE';
 }
