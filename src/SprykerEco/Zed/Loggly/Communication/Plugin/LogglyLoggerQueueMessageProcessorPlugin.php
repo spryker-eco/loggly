@@ -24,7 +24,7 @@ class LogglyLoggerQueueMessageProcessorPlugin extends AbstractPlugin implements 
      *
      * @return \Generated\Shared\Transfer\QueueReceiveMessageTransfer[]
      */
-    public function processMessages(array $queueMessageTransfers)
+    public function processMessages(array $queueMessageTransfers): array
     {
         try {
             $data = '';
@@ -62,7 +62,7 @@ class LogglyLoggerQueueMessageProcessorPlugin extends AbstractPlugin implements 
      *
      * @return int
      */
-    public function getChunkSize()
+    public function getChunkSize(): int
     {
         return $this->getConfig()->getQueueChunkSize();
     }
