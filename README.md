@@ -1,6 +1,6 @@
 # Loggly Module
 [![Build Status](https://travis-ci.org/spryker-eco/loggly.svg)](https://travis-ci.org/spryker-eco/loggly)
-[![Coverage Status](https://coveralls.io/repos/github/spryker-eco/loggly/badge.svg)](https://coveralls.io/github/spryker-eco/loggly)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg)](https://php.net/)
 
 This module can be used when Log entries should be sent from a queue to [Loggly](https://www.loggly.com/).
 
