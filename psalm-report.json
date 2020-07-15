@@ -1,0 +1,54 @@
+{
+    "error": [],
+    "warning": [
+        {
+            "severity": "info",
+            "line_from": 32,
+            "line_to": 32,
+            "type": "PossiblyNullOperand",
+            "message": "Cannot concatenate with a possibly null null|string",
+            "file_name": "vendor/spryker-eco/loggly/src/SprykerEco/Zed/Loggly/Communication/Plugin/LogglyLoggerQueueMessageProcessorPlugin.php",
+            "snippet": "                $data .= $queueMessageTransfer->getQueueMessage()->getBody() . PHP_EOL;",
+            "selected_text": "$queueMessageTransfer->getQueueMessage()->getBody()",
+            "error_level": 1,
+            "shortcode": 80
+        },
+        {
+            "severity": "info",
+            "line_from": 32,
+            "line_to": 32,
+            "type": "PossiblyNullReference",
+            "message": "Cannot call method getBody on possibly null value",
+            "file_name": "vendor/spryker-eco/loggly/src/SprykerEco/Zed/Loggly/Communication/Plugin/LogglyLoggerQueueMessageProcessorPlugin.php",
+            "snippet": "                $data .= $queueMessageTransfer->getQueueMessage()->getBody() . PHP_EOL;",
+            "selected_text": "getBody",
+            "error_level": 3,
+            "shortcode": 83
+        },
+        {
+            "severity": "info",
+            "line_from": 46,
+            "line_to": 46,
+            "type": "InternalClass",
+            "message": "Monolog\\Handler\\Curl\\Util is marked internal",
+            "file_name": "vendor/spryker-eco/loggly/src/SprykerEco/Zed/Loggly/Communication/Plugin/LogglyLoggerQueueMessageProcessorPlugin.php",
+            "snippet": "            Util::execute($curlHandler);",
+            "selected_text": "Util::execute($curlHandler)",
+            "error_level": 4,
+            "shortcode": 174
+        },
+        {
+            "severity": "info",
+            "line_from": 46,
+            "line_to": 46,
+            "type": "InternalMethod",
+            "message": "The method Monolog\\Handler\\Curl\\Util::execute has been marked as internal",
+            "file_name": "vendor/spryker-eco/loggly/src/SprykerEco/Zed/Loggly/Communication/Plugin/LogglyLoggerQueueMessageProcessorPlugin.php",
+            "snippet": "            Util::execute($curlHandler);",
+            "selected_text": "Util::execute($curlHandler)",
+            "error_level": 4,
+            "shortcode": 175
+        }
+    ],
+    "deprecation": []
+}
