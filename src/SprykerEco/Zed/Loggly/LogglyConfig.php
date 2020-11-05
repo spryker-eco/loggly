@@ -19,6 +19,8 @@ class LogglyConfig extends AbstractBundleConfig
     public const ENDPOINT_BULK = 'bulk';
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getLogglyToken(): string
@@ -27,6 +29,8 @@ class LogglyConfig extends AbstractBundleConfig
     }
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getEndpoint(): string
@@ -35,6 +39,8 @@ class LogglyConfig extends AbstractBundleConfig
     }
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getQueueName(): string
@@ -43,6 +49,8 @@ class LogglyConfig extends AbstractBundleConfig
     }
 
     /**
+     * @api
+     *
      * @return int
      */
     public function getQueueChunkSize(): int

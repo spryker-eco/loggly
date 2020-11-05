@@ -18,6 +18,8 @@ use Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface;
 class LogglyLoggerQueueMessageProcessorPlugin extends AbstractPlugin implements QueueMessageProcessorPluginInterface
 {
     /**
+     * {@inheritDoc}
+     *
      * @api
      *
      * @param \Generated\Shared\Transfer\QueueReceiveMessageTransfer[] $queueMessageTransfers
@@ -58,6 +60,8 @@ class LogglyLoggerQueueMessageProcessorPlugin extends AbstractPlugin implements 
     }
 
     /**
+     * {@inheritDoc}
+     *
      * @api
      *
      * @return int
