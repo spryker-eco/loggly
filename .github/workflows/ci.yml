@@ -15,7 +15,8 @@ jobs:
             fail-fast: false
             matrix:
                 include:
-                    - php: '7.4'
+                    - php: '7.3'
+                    - php: '8.0'
 
         env:
             APPLICATION_ENV: devtest
@@ -58,9 +59,6 @@ jobs:
 
             - name: Run CodeStyle checks
               run: composer cs-check
-
-            - name: PHPStan setup
-              run: composer stan-setup
 
             - name: Run PHPStan
               run: composer stan
