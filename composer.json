@@ -4,14 +4,16 @@
     "description": "Loggly module",
     "license": "proprietary",
     "require": {
-        "php": ">=7.3",
-        "spryker/kernel": "^3.30.0"
+        "php": ">=7.4",
+        "spryker/kernel": "^3.49.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.12",
-        "spryker/code-sniffer": "*",
-        "spryker/monolog": "*",
-        "spryker/queue": "*"
+        "phpstan/phpstan": "^1.0.0",
+        "spryker/code-sniffer": "^0.17.1",
+        "spryker/monolog": "^2.0.4",
+        "spryker/queue": "^1.5.0",
+        "spryker/testify": "^3.40.0",
+        "spryker/transfer": "^3.25.0"
     },
     "suggest": {
         "spryker/monolog": "Needed to send messages to loggly via Curl helper",
@@ -22,12 +24,20 @@
             "SprykerEco\\": "src/SprykerEco/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "SprykerEcoTest\\": "tests/SprykerEcoTest/"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/",
-        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/",
-        "stan": "phpstan analyse -c phpstan.neon -l 8 src/"
+        "test": "vendor/bin/codecept run",
+        "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml --ignore=/tests/app/ src/ tests/",
+        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml --ignore=/tests/app/ src/ tests/",
+        "stan": "phpstan analyse",
+        "lowest": "validate-prefer-lowest",
+        "lowest-setup": "composer update --prefer-lowest --prefer-stable --prefer-dist --no-interaction && cp composer.json composer.backup && composer require --dev dereuromark/composer-prefer-lowest && mv composer.backup composer.json"
     },
     "extra": {
         "branch-alias": {
