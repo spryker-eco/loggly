@@ -22,16 +22,18 @@ class LogglyLoggerQueueMessageProcessorPlugin extends AbstractPlugin implements 
      *
      * @api
      *
-     * @param \Generated\Shared\Transfer\QueueReceiveMessageTransfer[] $queueMessageTransfers
+     * @param array<\Generated\Shared\Transfer\QueueReceiveMessageTransfer> $queueMessageTransfers
      *
-     * @return \Generated\Shared\Transfer\QueueReceiveMessageTransfer[]
+     * @return array<\Generated\Shared\Transfer\QueueReceiveMessageTransfer>
      */
     public function processMessages(array $queueMessageTransfers): array
     {
         try {
             $data = '';
             foreach ($queueMessageTransfers as $queueMessageTransfer) {
-                $data .= $queueMessageTransfer->getQueueMessage()->getBody() . PHP_EOL;
+                /** @var \Generated\Shared\Transfer\QueueSendMessageTransfer $message */
+                $message = $queueMessageTransfer->getQueueMessage();
+                $data .= $message->getBody() . PHP_EOL;
             }
             $url = $this->getConfig()->getEndpoint();
 

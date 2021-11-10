@@ -17,6 +17,8 @@ interface LogglyConstants
      * - Token for your loggly account.
      *
      * @api
+     *
+     * @var string
      */
     public const TOKEN = 'LOGGLY:TOKEN';
 
@@ -25,6 +27,8 @@ interface LogglyConstants
      * - Name of your Loggly log queue (default: loggly-log-queue).
      *
      * @api
+     *
+     * @var string
      */
     public const QUEUE_NAME = 'LOGGLY:QUEUE_NAME';
 
@@ -33,6 +37,8 @@ interface LogglyConstants
      * - Name of your Loggly log error queue (default: loggly-log-queue-error).
      *
      * @api
+     *
+     * @var string
      */
     public const ERROR_QUEUE_NAME = 'LOGGLY:ERROR_QUEUE_NAME';
 
@@ -41,6 +47,8 @@ interface LogglyConstants
      * - Chunk size for messages to be processed from queue (default: 50).
      *
      * @api
+     *
+     * @var string
      */
     public const QUEUE_CHUNK_SIZE = 'LOGGLY:QUEUE_CHUNK_SIZE';
 }
