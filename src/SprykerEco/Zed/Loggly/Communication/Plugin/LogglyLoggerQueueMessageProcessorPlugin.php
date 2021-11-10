@@ -7,10 +7,10 @@
 
 namespace SprykerEco\Zed\Loggly\Communication\Plugin;
 
-use Exception;
 use Monolog\Handler\Curl\Util;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface;
+use Throwable;
 
 /**
  * @method \SprykerEco\Zed\Loggly\LogglyConfig getConfig()
@@ -52,7 +52,7 @@ class LogglyLoggerQueueMessageProcessorPlugin extends AbstractPlugin implements 
             foreach ($queueMessageTransfers as $queueMessageTransfer) {
                 $queueMessageTransfer->setAcknowledge(true);
             }
-        } catch (Exception $e) {
+        } catch (Throwable $e) {
             foreach ($queueMessageTransfers as $queueMessageTransfer) {
                 $queueMessageTransfer->setHasError(true);
             }
