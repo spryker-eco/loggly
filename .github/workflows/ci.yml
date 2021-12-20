@@ -16,7 +16,7 @@ jobs:
             matrix:
                 include:
                     - php: '7.4'
-                    - php: '8.0'
+                    - php: '8.1'
 
         env:
             APPLICATION_ENV: devtest
@@ -25,6 +25,13 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php }}
+                  extensions: mbstring, intl
+                  tools: composer:v2
 
             - name: Configure sysctl limits
               run: |
@@ -50,12 +57,6 @@ jobs:
               run: |
                   composer --version
                   composer install
-            - name: Setup PHP
-              uses: shivammathur/setup-php@v2
-              with:
-                  php-version: ${{ matrix.php }}
-                  extensions: mbstring, intl
-                  tools: composer:v2
 
             - name: Run tests
               run: composer test
