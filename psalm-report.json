@@ -1,5 +1,18 @@
 {
     "error": [],
-    "warning": [],
+    "warning": [
+        {
+            "severity": "info",
+            "line_from": 36,
+            "line_to": 36,
+            "type": "PossiblyNullOperand",
+            "message": "Cannot concatenate with a possibly null null|string",
+            "file_name": "vendor/spryker-eco/loggly/src/SprykerEco/Zed/Loggly/Communication/Plugin/LogglyLoggerQueueMessageProcessorPlugin.php",
+            "snippet": "                $data .= $message->getBody() . PHP_EOL;",
+            "selected_text": "$message->getBody()",
+            "error_level": 1,
+            "shortcode": 80
+        }
+    ],
     "deprecation": []
 }
